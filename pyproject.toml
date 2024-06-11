@@ -1,0 +1,30 @@
+[project]
+name = "quiz-mesop"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "mymissuniverse", email = "mymissuniverse@icloud.com" }
+]
+dependencies = [
+    "mesop>=0.0.1",
+    "gunicorn>=22.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+hello = "quiz_mesop:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quiz_mesop"]
